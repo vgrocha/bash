@@ -1,0 +1,29 @@
+x#!/bin/bash
+#! You need to install the xdotool package:
+#!    sudo apt-get install xdotool
+#
+# I have developped this script because i work with two screens, with somewhat high resolution.
+# as I am lazy, i hate rolling the mouse from one monitor to the next
+# it is customized for two screen side by side only
+
+Screen0XSize=1920
+
+#Screen0YSize=1080
+#Screen1XSize=1920
+#Screen1YSize=1080
+
+#echo Screensize properties, screen 1 $Screen0XSize x $Screen0YSize, Screen1 $Screen1XSize x $Screen1YSize
+
+#get the mouse position set on the $X and $Y vars...
+eval $(xdotool getmouselocation --shell)
+
+#echo mouse at position $X $Y
+
+# checks which screen is the mouse on and
+# subtract or add to reposition the mouse
+if [ "$X" -gt "$Screen0XSize" ]
+then
+	xdotool mousemove $(( X - Screen0XSize )) $Y
+ else
+	xdotool mousemove $(( Screen0XSize + X )) $Y
+fi
