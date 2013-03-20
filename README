@@ -1,4 +1,7 @@
 Script for improving use of two monitors
 
-chgmousescreen - changes mouse pointer from left to right monitor, and vice-versa
-chgwindowscreen - changes the current window from left monitor to right, and vice versa. Also preserve maximization
+* chgmousescreen - changes mouse pointer from left to right monitor, and vice-versa
+* chgwindowscreen - changes the current window from left monitor to right, and vice versa. Also preserve maximization
+
+Script for unescaping DIA .tex files formulas
+   Developped while doing my master thesis, in which I had nice DIA diagrams exported to tex, but all my formulas were escaped =)
